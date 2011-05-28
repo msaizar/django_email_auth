@@ -19,7 +19,7 @@ from email_auth.forms import AuthenticationForm
 user_logged_in = Signal(providing_args=['request',])
 user_logged_out = Signal(providing_args=['request',])
 
-def login(request, template_name='registration/login.html', redirect_field_name=REDIRECT_FIELD_NAME):
+def login(request, template_name='registration/login.html', form_class=AuthenticationForm, redirect_field_name=REDIRECT_FIELD_NAME):
     """
     Displays the login form, handles the email-based login action.
     May set a "remember me" cookie.
@@ -29,7 +29,7 @@ def login(request, template_name='registration/login.html', redirect_field_name=
     import datetime
     redirect_to = request.REQUEST.get('next', '')
     if request.method == "POST":
-        form = AuthenticationForm(data=request.POST)
+        form = form_class(data=request.POST)
         if form.is_valid():
             # Light security check -- make sure redirect_to isn't garbage.
             if not redirect_to or '//' in redirect_to or ' ' in redirect_to:
@@ -70,10 +70,10 @@ def login(request, template_name='registration/login.html', redirect_field_name=
                 e,p = cookie_data.split(':')
             except ValueError:
                 e,p = (None,None)
-            form = AuthenticationForm(request, 
+            form = form_class(request, 
                     {'email': e, 'password': p, 'remember': True})
         else:
-            form = AuthenticationForm(request)
+            form = form_class(request)
     request.session.set_test_cookie()
     if Site._meta.installed:
         current_site = Site.objects.get_current()
