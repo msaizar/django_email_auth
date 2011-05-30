@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-08-29 16:41+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: backends.py:46
+#, python-format
+msgid "Could not get custom user model %s"
+msgstr "Imposible de obtener el modelo %s"
+
+#: forms.py:16
+msgid "Email"
+msgstr "Email"
+
+#: forms.py:17
+msgid "Remember me on this computer"
+msgstr "Recordarme en esta computadora"
+
+#: forms.py:27
+msgid ""
+"Please enter a correct email and password. Note that both fields are case-sensitive."
+msgstr "Ingrese un email y una contraseña válida."
+
+#: forms.py:29
+msgid "This account is inactive."
+msgstr "Esta cuenta está inactiva."
+
+#: forms.py:34
+msgid ""
+"Your Web browser doesn't appear to have cookies enabled. Cookies are required for logging in."
+msgstr "Su navegador no tiene cookies activadas. Las cookies son necesarias para iniciar sesión."
+
+#: middleware.py:38
+#, python-format
+msgid "Sorry, you are not allowed to access to %s"
+msgstr "Lo sentimos, no tiene autorización para acceder a %s"
+
+#: middleware.py:43
+msgid "<h1>Forbidden</h1><p>You do not have staff privileges.</p>"
+msgstr "<h1>Denegado</h1><p>No tiene autorización suficiente.</p>"
+
+#: views.py:105
+msgid "Logged out"
+msgstr "Sesión cerrada"
+
+#: templates/registration/logged_out.html:4
+msgid "Home"
+msgstr "Inicio"
+
+#: templates/registration/logged_out.html:8
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr "Gracias por su visita."
+
+#: templates/registration/logged_out.html:10
+msgid "Log in again"
+msgstr "Iniciar sesión nuevamente"
+
+#: templates/registration/login.html:28
+msgid "Log in"
+msgstr "Iniciar sesión"
